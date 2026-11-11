@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neon Arcade</title>
+<style>
+  :root {
+    color-scheme: dark;
+    --ink: #070511;
+    --text: #effbff;
+    --muted: #8b9bb8;
+    --cyan: #55f7ff;
+    --pink: #ff2e9a;
+    --line: rgba(85, 247, 255, 0.28);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    color: var(--text);
+    background:
+      radial-gradient(ellipse at 50% -10%, rgba(164, 119, 255, 0.22), transparent 46%),
+      var(--ink);
+  }
+  main {
+    width: min(1080px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 48px 0 64px;
+  }
+  p { color: var(--muted); }
+  h1 {
+    margin: 0 0 8px;
+    font-weight: 760;
+    letter-spacing: 0.08em;
+    font-size: clamp(2rem, 5vw, 3.4rem);
+  }
+  .kicker {
+    margin: 0 0 28px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    color: var(--cyan);
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+  }
+  a.card {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    overflow: hidden;
+    background: rgba(8, 6, 20, 0.8);
+  }
+  a.card:hover { border-color: var(--pink); }
+  img { display: block; width: 100%; height: 180px; object-fit: cover; object-position: center; }
+  .card div { padding: 14px 16px 16px; }
+  h2 { margin: 0 0 6px; font-size: 1.15rem; letter-spacing: 0.06em; }
+  .card p { margin: 0; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<main>
+  <p class="kicker">Afterglow</p>
+  <h1>NEON ARCADE</h1>
+  <p>Three single-file games. Headphones on. Space starts a run.</p>
+  <div class="grid">
+    <a class="card" href="neon-tetris.html">
+      <img src="shot-tetris-menu.png" alt="Tetris menu">
+      <div>
+        <h2>TETRIS</h2>
+        <p>Stack the light. Arrows move, X or up rotates, space hard-drops.</p>
+      </div>
+    </a>
+    <a class="card" href="neon-serpent.html">
+      <img src="shot-menu.png" alt="Neon Serpent menu">
+      <div>
+        <h2>NEON SERPENT</h2>
+        <p>Devour the light. Arrows or WASD steer. P pauses.</p>
+      </div>
+    </a>
+    <a class="card" href="neon-arkanoid.html">
+      <img src="shot-arkanoid-menu.png" alt="Arkanoid menu">
+      <div>
+        <h2>ARKANOID</h2>
+        <p>Break the grid. Mouse or arrows steer. Space launches.</p>
+      </div>
+    </a>
+  </div>
+</main>
+</body>
+</html>
